@@ -125,6 +125,7 @@ namespace CinemaBooking.Views {
                 });
             }
 
+            selectedSeats.Clear();
             RefreshInputs();
         }
 

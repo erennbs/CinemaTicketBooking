@@ -59,6 +59,7 @@
             dgwMovieCountsByLanguage = new DataGridView();
             colLanguage = new DataGridViewTextBoxColumn();
             colMovieCount = new DataGridViewTextBoxColumn();
+            lblReports = new Label();
             tabReports.SuspendLayout();
             tabMostWatchedMovies.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgwMostWatchedMovies).BeginInit();
@@ -76,17 +77,17 @@
             // 
             // tabReports
             // 
+            tabReports.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabReports.Controls.Add(tabMostWatchedMovies);
             tabReports.Controls.Add(tabLeastWatchedMovies);
             tabReports.Controls.Add(tabPage3);
             tabReports.Controls.Add(tabPage1);
             tabReports.Controls.Add(tabPage2);
             tabReports.Controls.Add(tabPage4);
-            tabReports.Dock = DockStyle.Fill;
-            tabReports.Location = new Point(0, 0);
+            tabReports.Location = new Point(0, 130);
             tabReports.Name = "tabReports";
             tabReports.SelectedIndex = 0;
-            tabReports.Size = new Size(1486, 858);
+            tabReports.Size = new Size(1486, 728);
             tabReports.TabIndex = 0;
             tabReports.Selected += tabReports_Selected;
             // 
@@ -96,7 +97,7 @@
             tabMostWatchedMovies.Location = new Point(4, 34);
             tabMostWatchedMovies.Name = "tabMostWatchedMovies";
             tabMostWatchedMovies.Padding = new Padding(3);
-            tabMostWatchedMovies.Size = new Size(1478, 820);
+            tabMostWatchedMovies.Size = new Size(1478, 690);
             tabMostWatchedMovies.TabIndex = 0;
             tabMostWatchedMovies.Text = "En Çok İzlenen Filmler";
             tabMostWatchedMovies.UseVisualStyleBackColor = true;
@@ -117,7 +118,7 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(47, 54, 69);
             dgwMostWatchedMovies.RowsDefaultCellStyle = dataGridViewCellStyle1;
             dgwMostWatchedMovies.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgwMostWatchedMovies.Size = new Size(1472, 814);
+            dgwMostWatchedMovies.Size = new Size(1472, 684);
             dgwMostWatchedMovies.TabIndex = 1;
             // 
             // colMovieTitle
@@ -429,11 +430,22 @@
             colMovieCount.Name = "colMovieCount";
             colMovieCount.ReadOnly = true;
             // 
+            // lblReports
+            // 
+            lblReports.AutoSize = true;
+            lblReports.Font = new Font("Microsoft New Tai Lue", 16F, FontStyle.Bold);
+            lblReports.Location = new Point(3, 11);
+            lblReports.Name = "lblReports";
+            lblReports.Size = new Size(149, 43);
+            lblReports.TabIndex = 2;
+            lblReports.Text = "Raporlar";
+            // 
             // ReportsUserControl
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(lblReports);
             Controls.Add(tabReports);
             Name = "ReportsUserControl";
             Size = new Size(1486, 858);
@@ -452,6 +464,7 @@
             tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgwMovieCountsByLanguage).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -486,5 +499,6 @@
         private DataGridViewTextBoxColumn colViewerCount;
         private DataGridViewTextBoxColumn colLanguage;
         private DataGridViewTextBoxColumn colMovieCount;
+        private Label lblReports;
     }
 }

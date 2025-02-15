@@ -78,9 +78,9 @@
             lblTotalSeats.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblTotalSeats.Location = new Point(93, 236);
             lblTotalSeats.Name = "lblTotalSeats";
-            lblTotalSeats.Size = new Size(134, 27);
+            lblTotalSeats.Size = new Size(143, 27);
             lblTotalSeats.TabIndex = 41;
-            lblTotalSeats.Text = "Koltuk Sayısı";
+            lblTotalSeats.Text = "Koltuk Sayısı*";
             // 
             // nudHallNumber
             // 
@@ -134,9 +134,9 @@
             lblHallNumber.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblHallNumber.Location = new Point(93, 147);
             lblHallNumber.Name = "lblHallNumber";
-            lblHallNumber.Size = new Size(161, 27);
+            lblHallNumber.Size = new Size(170, 27);
             lblHallNumber.TabIndex = 20;
-            lblHallNumber.Text = "Salon Numarası";
+            lblHallNumber.Text = "Salon Numarası*";
             // 
             // lblCinema
             // 
@@ -145,9 +145,9 @@
             lblCinema.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblCinema.Location = new Point(93, 47);
             lblCinema.Name = "lblCinema";
-            lblCinema.Size = new Size(81, 27);
+            lblCinema.Size = new Size(90, 27);
             lblCinema.TabIndex = 18;
-            lblCinema.Text = "Sinema";
+            lblCinema.Text = "Sinema*";
             // 
             // AddHallUserControl
             // 

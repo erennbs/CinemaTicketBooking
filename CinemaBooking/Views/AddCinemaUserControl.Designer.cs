@@ -100,9 +100,9 @@
             lblCity.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblCity.Location = new Point(93, 147);
             lblCity.Name = "lblCity";
-            lblCity.Size = new Size(64, 27);
+            lblCity.Size = new Size(73, 27);
             lblCity.TabIndex = 20;
-            lblCity.Text = "Şehir";
+            lblCity.Text = "Şehir*";
             // 
             // lblCinemaName
             // 
@@ -111,9 +111,9 @@
             lblCinemaName.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblCinemaName.Location = new Point(93, 47);
             lblCinemaName.Name = "lblCinemaName";
-            lblCinemaName.Size = new Size(119, 27);
+            lblCinemaName.Size = new Size(128, 27);
             lblCinemaName.TabIndex = 18;
-            lblCinemaName.Text = "Sinema Adı";
+            lblCinemaName.Text = "Sinema Adı*";
             // 
             // lblAddCinema
             // 

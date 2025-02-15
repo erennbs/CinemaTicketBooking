@@ -78,6 +78,7 @@ namespace CinemaBooking.Views {
                     try {
                         int movieId = (int)dgwMovies.Rows[e.RowIndex].Cells[0].Value;
                         _movieService.Delete(new Movie { Id = movieId });
+                        RefreshDataGridView();
                     }
                     catch (SqlException) {
                         MessageBox.Show("Bu filmin seans(lar)ı bulunmakta!", "Hata");

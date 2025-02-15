@@ -69,11 +69,9 @@ namespace CinemaBooking.Views {
         }
 
         private void RefreshComboBoxes() {
-            cmbGenre.DataSource = null;
             cmbGenre.DataSource = _genreService.GetAll();
             cmbGenre.SelectedItem = null;
 
-            cmbLanguage.DataSource = null;
             cmbLanguage.DataSource = _languageDal.GetAll();
             cmbLanguage.SelectedItem = null;
         }

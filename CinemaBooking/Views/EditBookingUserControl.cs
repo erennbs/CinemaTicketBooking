@@ -47,7 +47,9 @@ namespace CinemaBooking.Views {
             cmbMovie.DataSource = _movieService.GetAllMovieTitlesOfCinema((int)cmbCinema.SelectedValue);
             cmbMovie.SelectedIndex = cmbMovie.FindStringExact(bookingDetails.MovieTitle);
             cmbShow.DataSource = _showService.GetFutureShowsByMovieAndCinema((int)cmbMovie.SelectedValue, (int)cmbCinema.SelectedValue);
-            cmbShow.SelectedIndex = cmbShow.FindStringExact(bookingDetails.StartTime.ToString("dd.MM.yyyy HH:mm"));
+            cmbShow.SelectedIndex = cmbShow.FindStringExact(bookingDetails.StartTime.ToString("d.MM.yyyy HH:mm"));
+            
+            //Debug.WriteLine(bookingDetails.StartTime.ToString("d.MM.yyyy HH:mm"));
 
             showSeats = _showSeatService.GetAllShowSeatsByShowId((int)cmbShow.SelectedValue);
 
@@ -104,7 +106,7 @@ namespace CinemaBooking.Views {
                 return;
             }
 
-            if (cmbShow.Text == _bookingDetails.StartTime.ToString("dd.MM.yyyy HH:mm")) {
+            if (cmbShow.Text == _bookingDetails.StartTime.ToString("d.MM.yyyy HH:mm")) {
                 _bookingService.Update(new Booking {
                     Id = _bookingDetails.Id,
                     NumberOfSeats = selectedSeats.Count,
@@ -151,6 +153,12 @@ namespace CinemaBooking.Views {
             showSeats = _showSeatService.GetAllShowSeatsByShowId((int)cmbShow.SelectedValue);
 
             CreateSeats(showSeats);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e) {
+            reservedSeats.Clear();
+            selectedSeats.Clear();
+            FillInputs(_bookingDetails);
         }
     }
 }

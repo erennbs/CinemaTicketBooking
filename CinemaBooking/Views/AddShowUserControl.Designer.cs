@@ -88,9 +88,9 @@
             lblCinema.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblCinema.Location = new Point(93, 135);
             lblCinema.Name = "lblCinema";
-            lblCinema.Size = new Size(81, 27);
+            lblCinema.Size = new Size(90, 27);
             lblCinema.TabIndex = 37;
-            lblCinema.Text = "Sinema";
+            lblCinema.Text = "Sinema*";
             // 
             // dtpEndTime
             // 
@@ -108,9 +108,9 @@
             lblEnd.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblEnd.Location = new Point(358, 316);
             lblEnd.Name = "lblEnd";
-            lblEnd.Size = new Size(56, 27);
+            lblEnd.Size = new Size(65, 27);
             lblEnd.TabIndex = 35;
-            lblEnd.Text = "Bitiş";
+            lblEnd.Text = "Bitiş*";
             // 
             // cmbMovie
             // 
@@ -166,9 +166,9 @@
             lblStart.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblStart.Location = new Point(93, 316);
             lblStart.Name = "lblStart";
-            lblStart.Size = new Size(104, 27);
+            lblStart.Size = new Size(113, 27);
             lblStart.TabIndex = 28;
-            lblStart.Text = "Başlangıç";
+            lblStart.Text = "Başlangıç*";
             // 
             // cmbHall
             // 
@@ -187,9 +187,9 @@
             lblHall.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblHall.Location = new Point(93, 221);
             lblHall.Name = "lblHall";
-            lblHall.Size = new Size(64, 27);
+            lblHall.Size = new Size(73, 27);
             lblHall.TabIndex = 20;
-            lblHall.Text = "Salon";
+            lblHall.Text = "Salon*";
             // 
             // lblMovie
             // 
@@ -198,9 +198,9 @@
             lblMovie.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblMovie.Location = new Point(93, 47);
             lblMovie.Name = "lblMovie";
-            lblMovie.Size = new Size(52, 27);
+            lblMovie.Size = new Size(61, 27);
             lblMovie.TabIndex = 18;
-            lblMovie.Text = "Film";
+            lblMovie.Text = "Film*";
             // 
             // AddShowUserControl
             // 

@@ -48,7 +48,7 @@ namespace CinemaBooking.Views {
             if (dgwUsers.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.ColumnIndex == 1) {
                 DialogResult result = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes) {
-                    int userId = (int)dgwUsers.Rows[e.RowIndex].Cells[0].Value;
+                    int userId = ((UserWithRoles)dgwUsers.Rows[e.RowIndex].DataBoundItem).UserId;
                     _userService.Delete(new User { Id = userId });
                     RefreshDataGridView();
                 }

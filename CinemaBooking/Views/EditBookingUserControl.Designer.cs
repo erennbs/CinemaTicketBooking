@@ -34,6 +34,7 @@
             btnEdit = new Button();
             lblShow = new Label();
             lblMovieName = new Label();
+            lblSeats = new Label();
             pnlBookingForm.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,6 +52,7 @@
             // pnlBookingForm
             // 
             pnlBookingForm.Anchor = AnchorStyles.Top;
+            pnlBookingForm.Controls.Add(lblSeats);
             pnlBookingForm.Controls.Add(cmbMovie);
             pnlBookingForm.Controls.Add(cmbCinema);
             pnlBookingForm.Controls.Add(lblCinema);
@@ -94,9 +96,9 @@
             lblCinema.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblCinema.Location = new Point(244, 42);
             lblCinema.Name = "lblCinema";
-            lblCinema.Size = new Size(81, 27);
+            lblCinema.Size = new Size(90, 27);
             lblCinema.TabIndex = 43;
-            lblCinema.Text = "Sinema";
+            lblCinema.Text = "Sinema*";
             // 
             // flpSeats
             // 
@@ -128,6 +130,7 @@
             btnClear.TabIndex = 33;
             btnClear.Text = "Temizle";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnEdit
             // 
@@ -151,9 +154,9 @@
             lblShow.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblShow.Location = new Point(244, 220);
             lblShow.Name = "lblShow";
-            lblShow.Size = new Size(66, 27);
+            lblShow.Size = new Size(75, 27);
             lblShow.TabIndex = 20;
-            lblShow.Text = "Seans";
+            lblShow.Text = "Seans*";
             // 
             // lblMovieName
             // 
@@ -162,9 +165,20 @@
             lblMovieName.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblMovieName.Location = new Point(244, 133);
             lblMovieName.Name = "lblMovieName";
-            lblMovieName.Size = new Size(52, 27);
+            lblMovieName.Size = new Size(61, 27);
             lblMovieName.TabIndex = 18;
-            lblMovieName.Text = "Film";
+            lblMovieName.Text = "Film*";
+            // 
+            // lblSeats
+            // 
+            lblSeats.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            lblSeats.AutoSize = true;
+            lblSeats.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
+            lblSeats.Location = new Point(449, 319);
+            lblSeats.Name = "lblSeats";
+            lblSeats.Size = new Size(99, 27);
+            lblSeats.TabIndex = 46;
+            lblSeats.Text = "Koltuklar";
             // 
             // EditBookingUserControl
             // 
@@ -192,5 +206,6 @@
         private Label lblCinema;
         private ComboBox cmbMovie;
         private ComboBox cmbCinema;
+        private Label lblSeats;
     }
 }

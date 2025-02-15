@@ -80,7 +80,7 @@
             dgwMovies.ReadOnly = true;
             dgwMovies.RowHeadersWidth = 62;
             dgwMovies.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgwMovies.Size = new Size(1298, 545);
+            dgwMovies.Size = new Size(1298, 552);
             dgwMovies.TabIndex = 1;
             dgwMovies.CellContentClick += dgwMovies_CellContentClick;
             dgwMovies.CellMouseDoubleClick += dgwMovies_CellMouseDoubleClick;

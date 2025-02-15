@@ -66,6 +66,11 @@ namespace CinemaBooking.Views {
                 return;
             }
 
+            if (dtpEndTime.Value < dtpStartTime.Value) {
+                MessageBox.Show("Bitiş zamanı başlangıç saatinden sonra olmalı");
+                return;
+            }
+
             Show show = new Show {
                 Id = _showDetails.Id,
                 MovieId = (int)cmbMovie.SelectedValue,
@@ -75,6 +80,7 @@ namespace CinemaBooking.Views {
             };
 
             _showService.Update(show);
+            Parent.Controls.RemoveAt(0);
         }
 
         private void cmbCinema_SelectedIndexChanged(object sender, EventArgs e) {

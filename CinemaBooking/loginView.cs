@@ -26,9 +26,7 @@ namespace CinemaBooking {
                 UserDetails = user;
                 Hide();
 
-                if (user.UserRead) new adminView().Show();
-                else new frontDeskView().Show();
-
+                new adminView().Show();
             }
             else {
                 lblErrorMessage.Text = "Kullanýcý adý ya da þifre hatalý!";

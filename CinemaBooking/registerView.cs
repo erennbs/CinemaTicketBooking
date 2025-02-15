@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CinemaBooking.Models;
+using System.Data.SqlClient;
 
 namespace CinemaBooking {
     public partial class registerView : Form {
@@ -34,11 +35,18 @@ namespace CinemaBooking {
                 return;
             }
 
-            _userService.Add(new User {
-                UserName = txtUsername.Text,
-                Birthday = dtpBirthday.Value,
-                Password = txtPassword.Text,
-            });
+            try {
+                _userService.Add(new User {
+                    UserName = txtUsername.Text,
+                    Birthday = dtpBirthday.Value,
+                    Password = txtPassword.Text,
+                });
+            }
+            catch (SqlException) {
+                MessageBox.Show("Bu kullanıcı adı alınmış!");
+                return;
+            }
+            
 
             Hide();
             _loginView.Show();

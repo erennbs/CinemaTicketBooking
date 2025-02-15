@@ -25,12 +25,16 @@ namespace CinemaBooking.Views {
             InitializeComponent();
         }
 
-        private void btnClear_Click(object sender, EventArgs e) {
+        private void ClearInputs() {
             cmbMovie.ResetText();
             cmbHall.ResetText();
             cmbCinema.ResetText();
             dtpStartTime.ResetText();
             dtpEndTime.ResetText();
+        }
+        
+        private void btnClear_Click(object sender, EventArgs e) {
+            ClearInputs();
         }
 
         private void btnAdd_Click(object sender, EventArgs e) {
@@ -45,6 +49,11 @@ namespace CinemaBooking.Views {
                 return;
             }
 
+            if (dtpEndTime.Value < dtpStartTime.Value) {
+                MessageBox.Show("Bitiş zamanı başlangıç saatinden sonra olmalı");
+                return;
+            }
+
             Show newShow = new Show {
                 MovieId = (int)cmbMovie.SelectedValue,
                 HallId = (int)cmbHall.SelectedValue,
@@ -53,6 +62,7 @@ namespace CinemaBooking.Views {
             };
 
             _showService.Add(newShow);
+            ClearInputs();
         }
 
         private void cmbCinema_SelectedIndexChanged(object sender, EventArgs e) {

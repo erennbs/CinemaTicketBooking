@@ -161,9 +161,9 @@
             lblPrice.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblPrice.Location = new Point(483, 382);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(58, 27);
+            lblPrice.Size = new Size(67, 27);
             lblPrice.TabIndex = 29;
-            lblPrice.Text = "Fiyat";
+            lblPrice.Text = "Fiyat*";
             // 
             // label1
             // 
@@ -192,9 +192,9 @@
             lblDuration.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblDuration.Location = new Point(358, 382);
             lblDuration.Name = "lblDuration";
-            lblDuration.Size = new Size(54, 27);
+            lblDuration.Size = new Size(63, 27);
             lblDuration.TabIndex = 26;
-            lblDuration.Text = "Süre";
+            lblDuration.Text = "Süre*";
             // 
             // cmbGenre
             // 
@@ -214,9 +214,9 @@
             lblGenre.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblGenre.Location = new Point(358, 297);
             lblGenre.Name = "lblGenre";
-            lblGenre.Size = new Size(44, 27);
+            lblGenre.Size = new Size(53, 27);
             lblGenre.TabIndex = 24;
-            lblGenre.Text = "Tür";
+            lblGenre.Text = "Tür*";
             // 
             // cmbLanguage
             // 
@@ -236,9 +236,9 @@
             lblLanguage.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblLanguage.Location = new Point(93, 297);
             lblLanguage.Name = "lblLanguage";
-            lblLanguage.Size = new Size(39, 27);
+            lblLanguage.Size = new Size(48, 27);
             lblLanguage.TabIndex = 22;
-            lblLanguage.Text = "Dil";
+            lblLanguage.Text = "Dil*";
             // 
             // txtDescription
             // 
@@ -275,9 +275,9 @@
             lblMovieName.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblMovieName.Location = new Point(93, 47);
             lblMovieName.Name = "lblMovieName";
-            lblMovieName.Size = new Size(90, 27);
+            lblMovieName.Size = new Size(99, 27);
             lblMovieName.TabIndex = 18;
-            lblMovieName.Text = "Film Adı";
+            lblMovieName.Text = "Film Adı*";
             // 
             // ofdImagePicker
             // 

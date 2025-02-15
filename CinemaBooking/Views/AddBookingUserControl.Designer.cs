@@ -34,12 +34,14 @@
             lblShow = new Label();
             lblMovieName = new Label();
             lblAddBooking = new Label();
+            label1 = new Label();
             pnlBookingForm.SuspendLayout();
             SuspendLayout();
             // 
             // pnlBookingForm
             // 
             pnlBookingForm.Anchor = AnchorStyles.Top;
+            pnlBookingForm.Controls.Add(label1);
             pnlBookingForm.Controls.Add(cmbCinema);
             pnlBookingForm.Controls.Add(lblCinema);
             pnlBookingForm.Controls.Add(flpSeats);
@@ -51,7 +53,7 @@
             pnlBookingForm.Controls.Add(lblMovieName);
             pnlBookingForm.Location = new Point(178, 112);
             pnlBookingForm.Name = "pnlBookingForm";
-            pnlBookingForm.Size = new Size(1019, 1026);
+            pnlBookingForm.Size = new Size(1011, 1026);
             pnlBookingForm.TabIndex = 5;
             // 
             // cmbCinema
@@ -72,13 +74,13 @@
             lblCinema.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblCinema.Location = new Point(244, 44);
             lblCinema.Name = "lblCinema";
-            lblCinema.Size = new Size(81, 27);
+            lblCinema.Size = new Size(90, 27);
             lblCinema.TabIndex = 43;
-            lblCinema.Text = "Sinema";
+            lblCinema.Text = "Sinema*";
             // 
             // flpSeats
             // 
-            flpSeats.Location = new Point(76, 349);
+            flpSeats.Location = new Point(72, 349);
             flpSeats.Name = "flpSeats";
             flpSeats.Size = new Size(870, 441);
             flpSeats.TabIndex = 42;
@@ -141,9 +143,9 @@
             lblShow.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblShow.Location = new Point(244, 220);
             lblShow.Name = "lblShow";
-            lblShow.Size = new Size(66, 27);
+            lblShow.Size = new Size(75, 27);
             lblShow.TabIndex = 20;
-            lblShow.Text = "Seans";
+            lblShow.Text = "Seans*";
             // 
             // lblMovieName
             // 
@@ -152,9 +154,9 @@
             lblMovieName.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
             lblMovieName.Location = new Point(244, 132);
             lblMovieName.Name = "lblMovieName";
-            lblMovieName.Size = new Size(52, 27);
+            lblMovieName.Size = new Size(61, 27);
             lblMovieName.TabIndex = 18;
-            lblMovieName.Text = "Film";
+            lblMovieName.Text = "Film*";
             // 
             // lblAddBooking
             // 
@@ -165,6 +167,17 @@
             lblAddBooking.Size = new Size(279, 43);
             lblAddBooking.TabIndex = 6;
             lblAddBooking.Text = "Yeni Rezervasyon";
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft New Tai Lue", 10F, FontStyle.Bold);
+            label1.Location = new Point(452, 319);
+            label1.Name = "label1";
+            label1.Size = new Size(99, 27);
+            label1.TabIndex = 45;
+            label1.Text = "Koltuklar";
             // 
             // AddBookingUserControl
             // 
@@ -195,5 +208,6 @@
         private FlowLayoutPanel flpSeats;
         private ComboBox cmbCinema;
         private Label lblCinema;
+        private Label label1;
     }
 }

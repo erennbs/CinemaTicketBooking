@@ -42,7 +42,7 @@ namespace CinemaBooking.Views {
                 DialogResult result = MessageBox.Show("Silmek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes) {
                     try {
-                        int hallId = (int)dgwHalls.Rows[e.RowIndex].Cells[0].Value;
+                        int hallId = ((CinemaHallDetailsDto)dgwHalls.Rows[e.RowIndex].DataBoundItem).Id;
                         _cinemaHallService.Delete(new CinemaHall { Id = hallId });
                         RefreshDataGridView();
                     }

@@ -77,6 +77,11 @@ namespace CinemaBooking.Views {
                     MessageBox.Show("Rezervasyon düzenleme yetkiniz yok!");
                     return;
                 }
+                if (((BookingDetailsDto)dgwBookings.Rows[e.RowIndex].DataBoundItem).StartTime < DateTime.Now) {
+                    // Show already started or done.
+                    MessageBox.Show("Zamanı geçen seanslar düzenlenemez");
+                    return;
+                }
                 BookingDetailsDto movieDetails = (BookingDetailsDto)dgwBookings.Rows[e.RowIndex].DataBoundItem;
                 ShowBookingEditPage(movieDetails);
             }
